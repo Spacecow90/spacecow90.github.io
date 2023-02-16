@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--matches physical pixels to digital ones-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--references the css style sheet and javascript script file.-->
+        <link rel="stylesheet" href="Style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Marvel&family=Tourney:wght@600;900&display=swap" rel="stylesheet">
+
+        <script defer src="Script.js"></script>
+
+        <title>CONNECT 4</title>
+    </head>
+
+    <body>
+
+        <audio id = "winAudio">
+            <source defer src=".//AudioFiles/Win.mp3" type="audio/mpeg">
+        </audio>
+
+        <audio id = "loseAudio">
+            <source defer src=".//AudioFiles/Lose.mp3" type="audio/mpeg">
+        </audio>
+
+        <audio id = "pieceFallAudio">
+            <source defer src=".//AudioFiles/Piece Fall.mp3" type="audio/mpeg">
+        </audio>
+
+        <audio id = "piecesCrashAudio">
+            <source defer src=".//AudioFiles/Pieces Crash.mp3" type="audio/mpeg">
+        </audio>
+
+        <div id="gameAndControls">
+            <div id = "pageTitle">
+                <h1>Connect 4</h1>
+                <h2 id = "playerTurn"></h2>
+            </div>
+            <div id="clickBoard">
+                <div id="gameOver">
+                    <h2 id = "winnerDisplay"></h2>
+                    <button onclick="playAgain()" id="restart">Play Again?</button>
+                </div>
+                <button onclick="charPressed(this.id)" class= "invsButton" id="0"></button>
+                <button onclick="charPressed(this.id)" class= "invsButton" id="1"></button>
+                <button onclick="charPressed(this.id)" class= "invsButton" id="2"></button>
+                <button onclick="charPressed(this.id)" class= "invsButton" id="3"></button>
+                <button onclick="charPressed(this.id)" class= "invsButton" id="4"></button>
+                <button onclick="charPressed(this.id)" class= "invsButton" id="5"></button>
+                <button onclick="charPressed(this.id)" class= "invsButton" id="6"></button>
+            </div>
+            <div id="gameBoard"></div>
+            <h2>Made by Alex, Cole and Cohen</h2>
+        </div>
+        
+    </body>
+<html>
