@@ -12,37 +12,48 @@
 
         <script defer src="Script.js"></script>
 
+        <!--Title of the Site -->
         <title>CONNECT 4</title>
     </head>
 
     <body>
-
+        <!-- The following are audio files and their sources-->
         <audio id = "winAudio">
+            <!--Leszek Szary. (2021, 05, August). Success 1. [audio file] in Pixabay. Retrieved from https://pixabay.com/sound-effects/f6-102819/-->
             <source defer src=".//AudioFiles/Win.mp3" type="audio/mpeg">
         </audio>
-
+        <!--Used when the board is full and no one wins -->
         <audio id = "loseAudio">
+            <!--themusicalnomad. (2021, 05, August). Negative Beeps. [audio file] in Pixabay. Retrieved from https://pixabay.com/sound-effects/f6-102819/-->
             <source defer src=".//AudioFiles/Lose.mp3" type="audio/mpeg">
         </audio>
-
+        <!--Used when placing a piece -->
         <audio id = "pieceFallAudio">
             <source defer src=".//AudioFiles/Piece Fall.mp3" type="audio/mpeg">
         </audio>
-
+        <!-- Used on Game Reset-->
         <audio id = "piecesCrashAudio">
             <source defer src=".//AudioFiles/Pieces Crash.mp3" type="audio/mpeg">
         </audio>
-
+        <!--This Div Encompasses the entire game screen -->
         <div id="gameAndControls">
+            <!-- -->
             <div id = "pageTitle">
+                <!--Visible title displayed at the top of the screen -->
                 <h1>Connect 4</h1>
+                <!--Text that displays the current team colour ie; red or yellow -->
                 <h2 id = "playerTurn"></h2>
             </div>
+            <!--This is where all the buttons for each column are stored -->
             <div id="clickBoard">
+                
                 <div id="gameOver">
+                    <!--this is where the gameover box is shown, it displays the winnning team (or losers)-->
                     <h2 id = "winnerDisplay"></h2>
+                    <!--Holds the button to restart and play a new round, calls the playAgain function-->
                     <button onclick="playAgain()" id="restart">Play Again?</button>
                 </div>
+                <!--The following buttons each correspond with a different column and called charPressed when clicked, sending their id along with it-->
                 <button onclick="charPressed(this.id)" class= "invsButton" id="0"></button>
                 <button onclick="charPressed(this.id)" class= "invsButton" id="1"></button>
                 <button onclick="charPressed(this.id)" class= "invsButton" id="2"></button>
@@ -51,7 +62,9 @@
                 <button onclick="charPressed(this.id)" class= "invsButton" id="5"></button>
                 <button onclick="charPressed(this.id)" class= "invsButton" id="6"></button>
             </div>
+            <!--The game board area that is created using javascript with different div's within it-->
             <div id="gameBoard"></div>
+            <!--Credit to us the people who made the site-->
             <h2>Made by Alex, Cole and Cohen</h2>
         </div>
         
