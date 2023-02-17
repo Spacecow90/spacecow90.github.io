@@ -148,7 +148,7 @@ function connect4Check(curColumn) {
     }
     //handles vertical
     for(let row = 0; row < 3; row++){
-        for(let column = 0; column < 6; column++){
+        for(let column = 0; column < 7; column++){
             if(grid[row][column] == grid[row+1][column] && grid[row+1][column] == grid[row+2][column] && grid[row+2][column] == grid[row+3][column] && grid[row][column] != 0){
                 winner();
                
@@ -165,7 +165,7 @@ function connect4Check(curColumn) {
         }
     }   
     //handles diagonal bottom-left to top-right
-    for(let row = 5; row > 3; row--){
+    for(let row = 5; row > 2; row--){
         for(let column = 0; column < 4; column++){
             if(grid[row][column] == grid[row-1][column+1] && grid[row-1][column+1] == grid[row-2][column+2] && grid[row-2][column+2] == grid[row-3][column+3] && grid[row][column] != 0){
                 winner();
